@@ -16,7 +16,9 @@ dist-ssr/
 build/
 backend/dist/
 FrontEnd/dist/
-
+.env
+.env.local
+.env.*.local
 # Database files
 *.db
 *.sqlite
