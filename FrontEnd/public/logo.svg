@@ -1,0 +1,81 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>CodeSight - Code Analysis & Visualization</title>
+  
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="60" fill="url(#bgGradient)"/>
+  
+  <!-- Eye outline (main shape) -->
+  <ellipse cx="64" cy="64" rx="50" ry="32" fill="none" stroke="url(#eyeGradient)" stroke-width="4"/>
+  
+  <!-- Upper eyelid accent -->
+  <path d="M14 64 Q64 32, 114 64" fill="none" stroke="url(#eyeGradient)" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Iris with network pattern -->
+  <circle cx="64" cy="64" r="22" fill="url(#irisGradient)" opacity="0.9"/>
+  
+  <!-- Network nodes inside iris (representing code analysis) -->
+  <circle cx="64" cy="64" r="3" fill="#ffffff"/>
+  <circle cx="52" cy="58" r="2.5" fill="#c4b5fd"/>
+  <circle cx="76" cy="58" r="2.5" fill="#c4b5fd"/>
+  <circle cx="58" cy="72" r="2.5" fill="#c4b5fd"/>
+  <circle cx="70" cy="72" r="2.5" fill="#c4b5fd"/>
+  
+  <!-- Connection lines (dependency graph) -->
+  <path d="M64 64 L52 58 M64 64 L76 58 M64 64 L58 72 M64 64 L70 72" 
+        stroke="#818cf8" stroke-width="1.5" opacity="0.7"/>
+  
+  <!-- Code brackets as pupil -->
+  <g transform="translate(64, 64)">
+    <!-- Left bracket { -->
+    <path d="M-8 -10 C-10 -10 -12 -8 -12 -6 L-12 -2 C-12 0 -14 2 -16 2 C-14 2 -12 4 -12 6 L-12 10 C-12 12 -10 14 -8 14" 
+          fill="none" stroke="#1e1b4b" stroke-width="2.5" stroke-linecap="round"/>
+    
+    <!-- Right bracket } -->
+    <path d="M8 -10 C10 -10 12 -8 12 -6 L12 -2 C12 0 14 2 16 2 C14 2 12 4 12 6 L12 10 C12 12 10 14 8 14" 
+          fill="none" stroke="#1e1b4b" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Outer glow effect -->
+  <ellipse cx="64" cy="64" rx="50" ry="32" fill="none" stroke="url(#glowGradient)" stroke-width="2" opacity="0.4"/>
+  
+  <!-- Highlight reflection -->
+  <ellipse cx="50" cy="50" rx="12" ry="8" fill="#ffffff" opacity="0.3"/>
+  
+  <!-- Scanning line effect -->
+  <path d="M20 64 L108 64" stroke="url(#scanGradient)" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#312e81"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    
+    <!-- Eye gradient -->
+    <linearGradient id="eyeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="50%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    
+    <!-- Iris gradient -->
+    <radialGradient id="irisGradient" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="#c4b5fd"/>
+      <stop offset="50%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </radialGradient>
+    
+    <!-- Glow gradient -->
+    <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    
+    <!-- Scan line gradient -->
+    <linearGradient id="scanGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>

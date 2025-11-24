@@ -1,0 +1,75 @@
+# Dependencies
+node_modules/
+FrontEnd/node_modules/
+backend/node_modules/
+
+# Environment Variables
+
+.env.local
+.env.*.local
+backend/.env
+FrontEnd/.env
+
+# Build outputs
+dist/
+dist-ssr/
+build/
+backend/dist/
+FrontEnd/dist/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+sessions.db
+backend/sessions.db
+
+# Debug files
+DEBUG_*.txt
+backend/DEBUG_*.txt
+
+# User-generated content
+projects/
+uploads/
+backend/projects/
+backend/uploads/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+*~
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Testing
+coverage/
+.nyc_output/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Lock files (optional - uncomment if you want to exclude them)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
