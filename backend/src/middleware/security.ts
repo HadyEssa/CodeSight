@@ -21,7 +21,7 @@ export function configureSecurity(app: Express) {
                 scriptSrc: ["'self'", "'unsafe-inline'"], // Note: 'unsafe-inline' needed for React dev
                 styleSrc: ["'self'", "'unsafe-inline'"],
                 imgSrc: ["'self'", 'data:', 'https:'],
-                connectSrc: ["'self'"],
+                connectSrc: ["'self'", "http://localhost:*", "ws://localhost:*"],
                 fontSrc: ["'self'"],
                 objectSrc: ["'none'"],
                 mediaSrc: ["'self'"],

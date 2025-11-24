@@ -52,17 +52,22 @@ export function decryptApiKey(encryptedKey: string): string {
 
     try {
         const encryptionKey = getEncryptionKey();
-        const decrypted = CryptoJS.AES.decrypt(encryptedKey, encryptionKey);
-        const apiKey = decrypted.toString(CryptoJS.enc.Utf8);
+        const bytes = CryptoJS.AES.decrypt(encryptedKey, encryptionKey);
+
+        // Check if bytes are valid before converting to string
+        if (bytes.sigBytes <= 0) {
+            return encryptedKey; // Not a valid encrypted string
+        }
+
+        const apiKey = bytes.toString(CryptoJS.enc.Utf8);
 
         if (!apiKey) {
-            console.error('[Encryption] Decryption resulted in empty string');
             return encryptedKey; // Return encrypted if decryption fails
         }
 
         return apiKey;
     } catch (error) {
-        console.error('[Encryption] Failed to decrypt API key:', error);
+        console.warn('[Encryption] Failed to decrypt API key (returning original):', error);
         return encryptedKey; // Return encrypted text if decryption fails
     }
 }
